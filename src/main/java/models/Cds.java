@@ -9,6 +9,6 @@ public class Cds {
     }
 
     public String getContent() {
-        return "hello";
+        return content;
     }
 }
