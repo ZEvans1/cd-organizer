@@ -17,7 +17,7 @@ public class Cds {
     }
 
     public static ArrayList<Cds> getAll() {
-        return null;
+        return instances;
     }
 
     public static void clearAllCds() {
