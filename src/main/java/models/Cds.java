@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Cds {
     private String content;
@@ -17,8 +18,10 @@ public class Cds {
     }
 
     public static ArrayList<Cds> getAll() {
+//        Collections.sort(instances);
         return instances;
     }
+
 
     public static void clearAllCds() {
         instances.clear();

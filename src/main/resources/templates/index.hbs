@@ -2,6 +2,16 @@
 
 <h1>CD list!</h1>
 
+{{#if cds}} <!--if posts exist, then -->
+{{#each cds }} <!--loop-->
+<p></p>
+<p>{{ content }}</p> <!--show-->
+{{/each}}
+{{else}} <!--no posts!-->
+<p>No CDs!</p>
+{{/if}}
+
+
 <p>Add a new CD:</p>
 
 <form action="/cds/new" method="POST">
