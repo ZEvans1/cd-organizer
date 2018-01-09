@@ -1,0 +1,15 @@
+{{#partial "content"}}
+
+<h1>CD list!</h1>
+
+<p>Add a new CD:</p>
+
+<form action="/cds/new" method="POST">
+    <label for="content">Cds Description</label>
+    <input id="content" name="content" type="text">
+
+    <button type="submit" class="btn btn-default">Add CD</button>
+</form>
+{{/partial}}
+
+{{> layout.hbs}}

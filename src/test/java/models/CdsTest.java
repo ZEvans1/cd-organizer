@@ -12,7 +12,8 @@ public class CdsTest {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
+        Cds.clearAllCds();
     }
 
     @Test
@@ -25,6 +26,21 @@ public class CdsTest {
     public void CdsInstatiatesWIthContent_true() throws Exception {
         Cds cds = new Cds("music");
         assertEquals("music", cds.getContent());
+    }
+
+    @Test
+    public void AllCdsAreCorrectlyReturned_true() {
+        Cds cds = new Cds("music");
+        Cds otherCds = new Cds ("pair them");
+        assertEquals(2, Cds.getAll().size());
+    }
+
+    @Test
+    public void AllCdsAreCorrectlyCds_true() {
+        Cds cds = new Cds ("music");
+        Cds otherCds = new Cds ("pair them");
+        assertTrue(Cds.getAll().contains(cds));
+        assertTrue(Cds.getAll().contains(otherCds));
     }
 
 }
