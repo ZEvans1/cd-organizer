@@ -21,4 +21,10 @@ public class CdsTest {
         assertEquals(true, cds instanceof Cds);
     }
 
+    @Test
+    public void CdsInstatiatesWIthContent_true() throws Exception {
+        Cds cds = new Cds("music");
+        assertEquals("music", cds.getContent());
+    }
+
 }

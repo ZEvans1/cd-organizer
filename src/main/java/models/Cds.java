@@ -1,7 +1,14 @@
 package models;
 
 public class Cds {
-    public Cds (String content) {
+    private String content;
 
+    public Cds (String content) {
+        this.content = content;
+
+    }
+
+    public String getContent() {
+        return "hello";
     }
 }
