@@ -2,12 +2,10 @@ package models;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Guest on 1/9/18.
- */
 public class CdsTest {
     @Before
     public void setUp() throws Exception {
@@ -15,6 +13,12 @@ public class CdsTest {
 
     @After
     public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void newCdsObjectCorrectlyCreated_true() throws Exception {
+        Cds cds = new Cds("music");
+        assertEquals(true, cds instanceof Cds);
     }
 
 }
